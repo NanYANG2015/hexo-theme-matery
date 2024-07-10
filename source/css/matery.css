@@ -16,8 +16,8 @@
 /*大屏幕下(桌面类)的样式*/
 @media only screen and (min-width: 993px) {
     .container {
-        width: 90%;
-        max-width: 1125px;
+        width: 98%;
+        max-width: 2000px;
     }
 
     .head-container {
@@ -27,9 +27,9 @@
     }
 
     .post-container {
-        width: 90%;
+        width: 98%;
         margin: 0 auto;
-        max-width: 1250px;
+        max-width: 2000px;
     }
 }
 
@@ -241,7 +241,8 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #bf30ac 0%, #0f9d58 100%);
+    opacity: 0.7;
 }
 
 .text-color {
@@ -533,7 +534,7 @@ header .go-back i {
     position: relative;
     display: flex;
     align-items: center;
-    height: 60vh;
+    height: 15vh;
     padding: 0;
     border: 0;
     overflow: hidden;
@@ -546,13 +547,11 @@ header .go-back i {
     height: 100vh;
 }
 
-.post-cover {
-    height: 40vh !important;
-}
-
 .bg-cover:after {
-    -webkit-animation: rainbow 60s infinite;
-    animation: rainbow 60s infinite;
+    /* -webkit-animation: rainbow 60s infinite;
+    animation: rainbow 60s infinite; */
+    background-image: linear-gradient(to right, #bf30ac 0%, #0f9d58 100%);
+    opacity: 0.7;
 }
 
 .bg-cover:before,
@@ -574,7 +573,7 @@ header .go-back i {
 }
 
 .bg-cover .title {
-    font-size: 4rem;
+    font-size: 1.5rem;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
@@ -847,6 +846,55 @@ header .go-back i {
     padding-right: 10px;
 }
 
+.category-list {
+    font-weight: 1000;
+}
+
+.category-list-item {
+    margin: 5px 3px;
+}
+
+.category-list-link {
+    color: #00BFFF;
+    padding: 9px 6px;
+    display: inline-flex;
+    line-height: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,.12);
+}
+.category-list-link:before {
+    display: inline;
+    content: "●\00a0"
+}
+.category-list-count {color: grey;}
+.category-list-count:before {
+    display: inline;
+    content: " ("
+}
+.category-list-count:after {
+    display: inline;
+    content: ") "
+}
+
+.category-list .category-list-child {
+    padding-left: 40px;
+    font-weight: 500;
+}
+
+.category-list .category-list-child .category-list-link {
+    color: #0f9d58;
+}
+
+.category-list .category-list-child .category-list-link:before {
+    display: inline;
+    content: "-"
+}
+.category-list .category-list-child .category-list-child .category-list-link:before {
+    display: inline;
+    content: "\00a0"
+}
+
 .archive-calendar {
     margin-top: -60px;
     max-width: 820px;
@@ -905,7 +953,30 @@ article .tag-image img {
 }
 
 article .card .card-content {
-    padding: 15px 15px 12px 18px;
+    padding: 5px 15px 5px 15px;
+}
+
+.card .card-content .card-title{
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size:20px;
+    font-weight:700;
+    text-align: center;
+}
+
+.card .card-content .publish-info .publish-date {
+    font-size:14px;
+    color:#8B008B;
+}
+.card .card-content .publish-info .publish-author{
+    font-size:13px;
+    color: #00FFFF;
+}
+.card .card-content .publish-info .publish-author .post-category{
+    color: #3CB371;
 }
 
 article .article-content .summary {
@@ -1023,10 +1094,6 @@ article .article-tags .chip {
     box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
     0 5px 15px rgba(0, 0, 0, .07),
     0 2px 5px -5px rgba(0, 0, 0, .1) !important;
-}
-
-#artDetail .tag-cate {
-    padding-bottom: 15px;
 }
 
 #artDetail a {
@@ -1282,6 +1349,10 @@ thead {
     font-weight: 400;
 }
 
+.chip-container .category-chips {
+    margin: auto auto auto 40%;
+}
+
 .chip-container .tag-chips {
     margin: 1rem auto 0.5rem;
     max-width: 850px;
@@ -1340,7 +1411,7 @@ thead {
     position: relative;
     width: 80px;
     height: 80px;
-    margin: 10px 0 50px -20px;
+    margin: 10px 0 10px -40px;
     padding: 21px 10px;
     background-color: #ff5722;
     color: #fff;
@@ -1356,7 +1427,7 @@ thead {
     position: relative;
     width: 60px;
     height: 60px;
-    margin: 10px 0 30px -10px;
+    margin: 10px 0 10px -30px;
     padding: 14px 16px;
     background-color: #ef6c00;
     color: #fff;
@@ -1390,7 +1461,6 @@ thead {
     content: '';
     position: absolute;
     top: 0;
-    left: 18px;
     height: 100%;
     width: 4px;
     background: #0f9d58;
@@ -1402,18 +1472,13 @@ thead {
         margin-bottom: 2rem;
     }
 
-    #cd-timeline::before {
-        left: 50%;
-        margin-left: -2px;
-    }
-
     #cd-timeline .year {
-        margin: 10px 0 50px -40px;
+        margin: 10px 0 10px -40px;
         padding: 22px 11px;
     }
 
     #cd-timeline .month {
-        margin: 10px 0 30px -30px;
+        margin: 10px 0 10px -30px;
         padding: 14px 16px;
     }
 }
@@ -1465,7 +1530,6 @@ thead {
     .cd-timeline-img {
         width: 40px;
         height: 40px;
-        left: 50%;
         margin-left: -20px;
         /* Force Hardware Acceleration in WebKit */
         -webkit-transform: translateZ(0);
@@ -1487,7 +1551,7 @@ thead {
 .cd-timeline-content {
     position: relative;
     margin-top: -40px;
-    margin-left: 60px;
+    margin-left: 40px;
     padding: 0;
     border-radius: 5px;
     background: #ffffff;
@@ -1533,22 +1597,22 @@ thead {
 
 @media only screen and (min-width: 900px) {
     .cd-timeline-content {
-        margin-left: 0;
+        margin-left: 40px;
         padding: 0;
-        width: 45%;
+        width: 100%;
 
     }
 
     .cd-timeline-content::before {
         top: 24px;
-        left: 100%;
+        right: 100%;
     }
 
     .cd-timeline-content .cd-read-more {
         float: left;
     }
 
-    .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    /*.cd-timeline-block:nth-child(even) .cd-timeline-content {
         float: right;
     }
 
@@ -1561,7 +1625,7 @@ thead {
 
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
         float: right;
-    }
+    }*/
 
     .cssanimations .cd-timeline-content.is-hidden {
         visibility: hidden;
@@ -1641,10 +1705,6 @@ thead {
     width: 100%;
     margin: 0 auto;
     transform: translate3d(0, -65%, 0);
-}
-
-.profile .author {
-    margin-top: -80px;
 }
 
 .profile .author .post-statis {

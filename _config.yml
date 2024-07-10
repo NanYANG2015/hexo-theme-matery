@@ -160,7 +160,7 @@ socialLink:
 toc:
   enable: true
   heading: h1, h2, h3, h4
-  collapseDepth: 0 # 目录默认展开层级
+  collapseDepth: 6 # 目录默认展开层级 https://github.com/tscanlin/tocbot/blob/master/src/js/default-options.js#L37
   showToggleBtn: true # 是否显示切换TOC目录展开收缩的按钮
 
 # 代码块相关

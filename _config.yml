@@ -8,20 +8,21 @@ menu:
     url: /categories
     icon: fas fa-archive
   关于:
+    url: /about
     icon: fas fa-user-circle
-    children:
-      - name: 我
-        url: /about
-        icon: fas fa-user-circle
-      - name: 文字
-        url: /words
-        icon: fas fa-pen
-      - name: 书
-        url: /books
-        icon: fas fa-book
-      - name: 视频
-        url: /videos
-        icon: fas fa-film
+    # children:
+    #   - name: 我
+    #     url: /about
+    #     icon: fas fa-user-circle
+    #   - name: 文字
+    #     url: /words
+    #     icon: fas fa-pen
+    #   - name: 书
+    #     url: /books
+    #     icon: fas fa-book
+    #   - name: 视频
+    #     url: /videos
+    #     icon: fas fa-film
 
 # Website start time.
 # 站点运行开始时间.
